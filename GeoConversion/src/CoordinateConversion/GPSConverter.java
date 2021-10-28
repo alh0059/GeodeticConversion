@@ -1,22 +1,20 @@
 package CoordinateConversion;
 
-//Some helpers for converting GPS readings from the WGS84 geodetic system to a local North-East-Up cartesian axis.
+// Some helpers for converting GPS readings from the WGS84 geodetic system to a local North-East-Up cartesian axis.
 
-//The implementation here is according to the paper:
-//"Conversion of Geodetic coordinates to the Local Tangent Plane" Version 2.01.
-//"The basic reference for this paper is J.Farrell & M.Barth 'The Global Positioning System & Inertial Navigation'"
-//Also helpful is Wikipedia: http://en.wikipedia.org/wiki/Geodetic_datum
-//Also helpful are the guidance notes here: http://www.epsg.org/Guidancenotes.aspx
+// The implementation here is according to the paper: "Conversion of Geodetic coordinates to the Local Tangent Plane" Version 2.01.
+// The basic reference for this paper is J.Farrell & M.Barth 'The Global Positioning System & Inertial Navigation'
+// Also helpful is Wikipedia: http://en.wikipedia.org/wiki/Geodetic_datum
+// Also helpful are the guidance notes here: http://www.epsg.org/Guidancenotes.aspx
 
 public class GPSConverter {
    
-	
-	// WGS-84 geodetic constants
+	// WGS-84 Geodetic constants
     final static double a = 6378137.0;          // WGS-84 Earth semimajor axis (m)
 
     final static double b = 6356752.314245;     // Derived Earth semiminor axis (m)
-    static double f = (a - b) / a;        // Ellipsoid Flatness
-    double f_inv = 1.0 / f;       // Inverse flattening
+    static double f = (a - b) / a;        		// Ellipsoid Flatness
+    double f_inv = 1.0 / f;       				// Inverse flattening
 
     //const double f_inv = 298.257223563; // WGS-84 Flattening Factor of the Earth 
     //const double b = a - a / f_inv;
