@@ -13,7 +13,7 @@ public class GPS {
 	}
 	
 	public void printGPS() {
-		System.out.println("Lat = "+this.latitude + " : longitude = "+this.longitude +" : zUp = "+this.height);
+		System.out.println("Latitude = "+this.latitude + " : Longitude = "+this.longitude +" : Height = "+this.height);
 	}
 	
 	
